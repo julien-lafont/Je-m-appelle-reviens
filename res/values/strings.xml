@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_nom">Je m\'appelle reviens</string>
+	
+	<!-- Général -->
+	<string name="pret">Prêt</string>
+	<string name="emprunt">Emprunt</string>
+	
+	<string name="indefini">Indéfini</string>
+	
+	<!-- Formulaire ajouter pret -->
+	<string name="titre_ajouter">Ajouter un prêt d\'objet</string>
+    <string name="btn_valider">Valider</string>
+    <string name="btn_annuler">Annuler</string>
+    <string name="label_type">Type</string>
+    <string name="label_nom">Nom</string>
+    <string name="label_description">Description</string>
+    <string name="label_date_rendu">A rendre le</string>
+    
+</resources>

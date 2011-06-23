@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+>
+
+	<TextView
+		android:id="@+id/barreTitre"
+		android:layout_width="fill_parent"
+		android:layout_height="30dp"
+		android:background="#00A8FF"
+		android:textColor="#000000"
+		android:textSize="15sp"
+		android:gravity="center"
+		android:layout_marginBottom="8dp"
+	android:text="@string/titre_ajouter"/>
+	
+	<!--  ______________________________________ -->
+	
+	<TextView
+   		android:id="@+id/type"
+   		android:gravity="left|center_vertical"
+   		android:layout_width="100dp"
+   		android:layout_height="wrap_content"
+   		android:layout_below="@id/barreTitre"
+   		android:layout_marginTop="10dp"
+   	android:text="@string/label_type"/>
+   		
+	<RadioGroup
+		android:id="@+id/editType"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_toRightOf="@id/type"
+		android:layout_below="@id/barreTitre"
+	>
+		<RadioButton android:id="@+id/type_pret"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1" android:text="@string/pret"/>
+		<RadioButton android:id="@+id/type_emprunt"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1" android:text="@string/emprunt"/>
+	</RadioGroup>
+	
+	<ImageView
+		android:id="@+id/ligneType"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:src = "@drawable/shape_ligne"
+		android:layout_below="@id/editType"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp"
+	/>
+	
+	<TextView
+   		android:id="@+id/nom"
+   		android:gravity="left|center_vertical"
+   		android:layout_width="100dp"
+   		android:layout_height="wrap_content"
+   		android:layout_below="@id/ligneType"
+   		android:layout_marginTop="10dp"
+   	android:text="@string/label_nom"/>
+   		
+	<EditText
+		android:id="@+id/editNom"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/nom"
+		android:layout_below="@id/ligneType"
+		android:singleLine="true"
+	/>
+	
+	<ImageView
+		android:id="@+id/ligneNom"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:src = "@drawable/shape_ligne"
+		android:layout_below="@id/editNom"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp"
+	/>
+	
+	<TextView
+		android:id="@+id/description"
+		android:gravity="left" 
+		android:layout_width="100dp"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@id/nom"
+		android:layout_below="@id/ligneNom"
+		android:layout_marginTop="10dp"
+	android:text="@string/label_description"/>
+		
+	<EditText
+		android:id="@+id/editDescription"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/ligneNom"
+		android:layout_toRightOf="@id/description"
+	/>
+       
+	<ImageView
+		android:id="@+id/ligneDesc"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:src = "@drawable/shape_ligne"
+		android:layout_below="@id/editDescription"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp"
+	/>
+	
+	<TextView
+		android:id="@+id/date_rendu"
+		android:gravity="left" 
+		android:layout_width="100dp"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@id/nom"
+		android:layout_below="@+id/ligneDesc"
+		android:layout_marginTop="10dp"
+		android:text="@string/label_date_rendu"/>
+		
+	<LinearLayout 
+		android:id="@+id/bloc_date"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_below="@+id/ligneDesc"
+		android:layout_toRightOf="@+id/date_rendu" android:gravity="right">
+	    <TextView android:id="@+id/dateTexte"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/indefini"/>
+	    <Button android:id="@+id/btnDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Date"
+	        />
+	</LinearLayout>
+	
+	<ImageView
+		android:id="@+id/ligneDate"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:src = "@drawable/shape_ligne"
+		android:layout_below="@+id/bloc_date"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp"
+	/>
+	
+	<LinearLayout android:layout_height="wrap_content" android:layout_below="@+id/ligneDate" android:layout_alignRight="@+id/ligneDesc"  android:layout_alignLeft="@+id/ligneDesc" android:layout_width="wrap_content" android:gravity="center|right">
+		<Button android:id="@+id/btn_annuler" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_annuler"></Button>
+		<Button android:id="@+id/btn_ajouter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_valider"></Button>
+	</LinearLayout>
+	
+
+</RelativeLayout>
